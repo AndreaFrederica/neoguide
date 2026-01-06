@@ -8,6 +8,10 @@ export default defineConfig({
   description: "Andrea and Sirrus projects wiki",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    
+    // 页面图标
+    logo: '/icon.png',
+    
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Andrea Novel Helper', link: '/AndreaNovelHelper/' },
