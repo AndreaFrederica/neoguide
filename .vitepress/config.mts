@@ -85,6 +85,7 @@ export default withPwa(
           text: '项目',
           items: [
             { text: 'Andrea Novel Helper', link: '/AndreaNovelHelper/' },
+            { text: 'NovelHelperLite', link: '/NovelHelperLite/' },
             { text: 'img2pic', link: '/img2pic/' },
             { text: 'Video2Motion', link: '/video2motion/' },
             { text: 'Luna Launcher', link: '/LunaLauncher/' },
@@ -429,6 +430,29 @@ export default withPwa(
               collapsed: true,
               items: [
                 { text: '开发指南', link: '/patchouli.js/developer/' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'NovelHelperLite',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '用户指南', link: '/NovelHelperLite/user/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '用户指南', link: '/NovelHelperLite/user/' },
+                { text: '产品介绍', link: '/NovelHelperLite/user/introduction.md' },
+                { text: '功能特性', link: '/NovelHelperLite/user/features.md' },
+                { text: '编辑器功能', link: '/NovelHelperLite/user/editor.md' },
+                { text: '设置', link: '/NovelHelperLite/user/settings.md' },
+                { text: '安装指南', link: '/NovelHelperLite/user/installation.md' },
               ]
             },
           ]
