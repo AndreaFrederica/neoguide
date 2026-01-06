@@ -41,7 +41,9 @@
 首次启动时，YukariConnect 会：
 1. 自动生成 `machine_id.txt`（唯一标识符）
 2. 创建默认配置文件 `yukari.json`
-3. 启动 Web UI（默认 `http://localhost:5062`）
+3. 启动 Web UI（默认 `http://127.0.0.1:5062`）
+
+> **注意**：默认 Web UI 地址为 `http://127.0.0.1:5062`，请在浏览器中打开此地址访问控制面板。
 
 ---
 
@@ -51,7 +53,7 @@
 
 #### 方法 1: 使用 Web UI
 
-1. 打开 `http://localhost:5062`
+1. 打开 `http://127.0.0.1:5062`
 2. 点击「创建房间」
 3. 输入玩家名称
 4. 选择公共服务器（或使用自定义）
@@ -60,7 +62,7 @@
 #### 方法 2: 使用 API
 
 ```bash
-curl "http://localhost:5062/state/scanning?player=MyName"
+curl "http://127.0.0.1:5062/state/scanning?player=MyName"
 ```
 
 ### 主机状态流程
@@ -98,7 +100,7 @@ YukariConnect 会自动检测到你的服务器。
 
 #### 方法 1: 使用 Web UI
 
-1. 打开 `http://localhost:5062`
+1. 打开 `http://127.0.0.1:5062`
 2. 点击「加入房间」
 3. 输入房间代码（如 `U/AB12-CD34-EF56-GH78`）
 4. 输入玩家名称
@@ -107,7 +109,7 @@ YukariConnect 会自动检测到你的服务器。
 #### 方法 2: 使用 API
 
 ```bash
-curl "http://localhost:5062/state/guesting?room=U/AB12-CD34-EF56-GH78&player=MyName"
+curl "http://127.0.0.1:5062/state/guesting?room=U/AB12-CD34-EF56-GH78&player=MyName"
 ```
 
 ### 访客状态流程
@@ -218,7 +220,7 @@ chmod +x resource/easytier-core
 
 **A:**
 1. 在 WebUI 中查看实时日志
-2. 或访问 `http://localhost:5062/log` 获取 SSE 日志流
+2. 或访问 `http://127.0.0.1:5062/log` 获取 SSE 日志流
 3. 查看日志文件（如果配置了文件日志）
 
 ### Q: 能自定义玩家名称吗？
@@ -253,7 +255,7 @@ chmod +x resource/easytier-core
 {
   "Port": 5062,
   "ScaffoldingPort": 13448,
-  "WebuiUrl": "http://localhost:5062",
+  "WebuiUrl": "http://127.0.0.1:5062",
   "PublicServerUrl": "",
   "MachineIdPath": "resource/machine_id.txt",
   "EasytierCorePath": "resource/easytier-core",
@@ -268,7 +270,7 @@ chmod +x resource/easytier-core
 |--------|------|--------|
 | `Port` | Web UI 端口 | 5062 |
 | `ScaffoldingPort` | Scaffolding 服务器端口 | 13448 |
-| `WebuiUrl` | Web UI URL | http://localhost:5062 |
+| `WebuiUrl` | Web UI URL | http://127.0.0.1:5062 |
 | `PublicServerUrl` | 自定义公共服务器 | "" |
 | `MachineIdPath` | Machine ID 文件路径 | resource/machine_id.txt |
 | `EasytierCorePath` | EasyTier 核心路径 | resource/easytier-core |

@@ -189,7 +189,7 @@
 
 ### Typst 模板
 
-- [Typst 小说模板](./resources/typst-template/) - 适用于小说排版的 Typst 模板
+- [Typst 小说模板](./resources/typst-template/index.md) - 适用于小说排版的 Typst 模板
 
 ---
 

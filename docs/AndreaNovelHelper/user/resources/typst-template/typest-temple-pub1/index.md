@@ -9,13 +9,11 @@ license: cc_by_nc_4_0
 lang: "zh_cn"
 ---
 
-## 模板下载
+## 模板使用
 
-查看 Typst 模板 源文件：[查看 novel1.typ](/downloads/novel1.typ)
+本模板用于排版小说内容卡片，支持自动分页功能。
 
-- 点击下载模板源文件：<a href="/downloads/novel1.typ" download>下载 novel1.typ</a>
-
-_当您二次分享时 希望您遵守模板的许可证 使用无需遵守 MIT 许可证_
+_当您二次分享时 希望您遵守模板的许可证_
 
 ## 模板预览
 
