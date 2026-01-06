@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(findstr /V \"::\")",
+      "Bash(findstr /V \"│\")",
+      "Bash(findstr:*)",
+      "Bash(mkdir:*)"
+    ]
+  }
+}
