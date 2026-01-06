@@ -13,6 +13,11 @@ export default defineConfig({
       { text: 'Andrea Novel Helper', link: '/AndreaNovelHelper/' },
       { text: 'img2pic', link: '/img2pic/' },
       { text: 'Video2Motion', link: '/video2motion/' },
+      { text: 'Luna Launcher', link: '/LunaLauncher/' },
+      { text: 'YukariConnect', link: '/YukariConnect/' },
+      { text: 'LibGuideBook', link: '/LibGuideBook/' },
+      { text: 'MyGO', link: '/mygo/' },
+      { text: 'Patchouli.js', link: '/patchouli.js/' },
     ],
 
     sidebar: {
@@ -209,6 +214,143 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '开发指南', link: '/video2motion/developer/' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'YukariConnect',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '项目介绍', link: '/YukariConnect/' },
+                { text: '用户指南', link: '/YukariConnect/user/' },
+                { text: '开发者文档', link: '/YukariConnect/developer/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '使用指南', link: '/YukariConnect/user/' },
+              ]
+            },
+            {
+              text: '开发者文档',
+              collapsed: true,
+              items: [
+                { text: '开发指南', link: '/YukariConnect/developer/' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'LibGuideBook',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '项目介绍', link: '/LibGuideBook/' },
+                { text: '用户指南', link: '/LibGuideBook/user/' },
+                { text: '开发者文档', link: '/LibGuideBook/developer/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '用户指南', link: '/LibGuideBook/user/' },
+                { text: '创建手册', link: '/LibGuideBook/user/creating-manuals.md' },
+                { text: '运行手册', link: '/LibGuideBook/user/running.md' },
+                {
+                  text: '交互工具',
+                  collapsed: true,
+                  items: [
+                    { text: '工具概览', link: '/LibGuideBook/user/tools/index.md' },
+                    { text: '计时器', link: '/LibGuideBook/user/tools/timer.md' },
+                    { text: '计算器', link: '/LibGuideBook/user/tools/calculator.md' },
+                    { text: '公式工具', link: '/LibGuideBook/user/tools/formula.md' },
+                  ]
+                },
+              ]
+            },
+            {
+              text: '开发者文档',
+              collapsed: true,
+              items: [
+                { text: '开发者指南', link: '/LibGuideBook/developer/' },
+                { text: '开发环境', link: '/LibGuideBook/developer/development.md' },
+                { text: '项目架构', link: '/LibGuideBook/developer/architecture.md' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'Luna Launcher',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '项目介绍', link: '/LunaLauncher/' },
+                { text: '用户指南', link: '/LunaLauncher/user/' },
+                { text: '开发者文档', link: '/LunaLauncher/developer/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '用户指南', link: '/LunaLauncher/user/' },
+                { text: '安装指南', link: '/LunaLauncher/user/installation.md' },
+                { text: '功能特性', link: '/LunaLauncher/user/features.md' },
+                { text: 'P2P 联机', link: '/LunaLauncher/user/p2p.md' },
+                { text: '镜像下载', link: '/LunaLauncher/user/mirrors.md' },
+                { text: '主题与界面', link: '/LunaLauncher/user/themes.md' },
+                { text: '常见问题', link: '/LunaLauncher/user/troubleshooting.md' },
+              ]
+            },
+            {
+              text: '开发者文档',
+              collapsed: true,
+              items: [
+                { text: '开发者指南', link: '/LunaLauncher/developer/' },
+                { text: '构建指南', link: '/LunaLauncher/developer/build.md' },
+                { text: '架构设计', link: '/LunaLauncher/developer/architecture.md' },
+                { text: 'BMCLAPI 集成', link: '/LunaLauncher/developer/bmclapi.md' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'MyGO',
+          items: [
+            { text: '项目介绍', link: '/mygo/' },
+          ]
+        },
+        {
+          text: 'Patchouli.js',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '项目介绍', link: '/patchouli.js/' },
+                { text: '用户指南', link: '/patchouli.js/user/' },
+                { text: '开发者文档', link: '/patchouli.js/developer/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '使用指南', link: '/patchouli.js/user/' },
+              ]
+            },
+            {
+              text: '开发者文档',
+              collapsed: true,
+              items: [
+                { text: '开发指南', link: '/patchouli.js/developer/' },
               ]
             },
           ]
