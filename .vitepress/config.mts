@@ -364,6 +364,42 @@ export default defineConfig({
       ]
     },
 
+    // 启用本地搜索
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        },
+        miniSearch: {
+          options: {
+            // 可以在这里添加自定义的 extractField, tokenize, processTerm 等配置
+          },
+          searchOptions: {
+            // 自定义搜索选项
+            // fuzzy: 0.2, 
+            // prefix: true, 
+            // boost: { title: 4, text: 2, titles: 1 }
+          }
+        }
+      }
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
