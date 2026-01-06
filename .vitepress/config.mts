@@ -135,6 +135,7 @@ export default defineConfig({
               text: '版本日志',
               collapsed: true,
               items: [
+                { text: '全部版本日志', link: '/AndreaNovelHelper/user/changelog.md' },
                 { text: 'v0.3.25', link: '/AndreaNovelHelper/user/changelog/novel-helper0325/' },
                 { text: 'v0.3.24', link: '/AndreaNovelHelper/user/changelog/novel-helper0324/' },
               ]
