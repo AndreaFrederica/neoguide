@@ -1,28 +1,101 @@
 import { defineConfig } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
-  srcDir: "docs",
+export default withPwa(
+  defineConfig({
+    srcDir: "docs",
 
-  title: "Andrea's Wiki",
-  description: "Andrea and Sirrus projects wiki",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    
-    // 页面图标
-    logo: '/icon.png',
-    
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Andrea Novel Helper', link: '/AndreaNovelHelper/' },
-      { text: 'img2pic', link: '/img2pic/' },
-      { text: 'Video2Motion', link: '/video2motion/' },
-      { text: 'Luna Launcher', link: '/LunaLauncher/' },
-      { text: 'YukariConnect', link: '/YukariConnect/' },
-      { text: 'LibGuideBook', link: '/LibGuideBook/' },
-      { text: 'MyGO', link: '/mygo/' },
-      { text: 'Patchouli.js', link: '/patchouli.js/' },
+    title: "Andrea's Wiki",
+    description: "Andrea and Sirrus projects wiki",
+    head: [
+      ['link', { rel: 'icon', href: '/icon.png' }]
     ],
+    lastUpdated: true,
+    cleanUrls: true,
+    lang: "zh-CN",
+
+    themeConfig: {
+      // https://vitepress.dev/reference/default-theme-config
+      
+      // 页面图标
+      logo: '/icon.png',
+      
+      // 本地搜索配置
+      search: {
+        provider: 'local',
+        options: {
+          locales: {
+            zh: {
+              translations: {
+                button: {
+                  buttonText: '搜索文档',
+                  buttonAriaLabel: '搜索文档'
+                },
+                modal: {
+                  noResultsText: '无法找到相关结果',
+                  resetButtonTitle: '清除查询条件',
+                  displayDetails: '显示详细',
+                  backButtonTitle: '返回',
+                  footer: {
+                    selectText: '选择',
+                    navigateText: '切换',
+                    closeText: '关闭'
+                  }
+                }
+              }
+            }
+          },
+          miniSearch: {
+            searchOptions: {
+              fuzzy: 0.2,
+              prefix: true,
+              boost: { title: 4, text: 2, titles: 1 }
+            }
+          }
+        }
+      },
+      
+      // 目录配置
+      outline: {
+        label: '目录',
+        level: 'deep'
+      },
+      
+      // 文档页脚
+      docFooter: {
+        prev: '上一页',
+        next: '下一页'
+      },
+      
+      // 其他UI文本配置
+      outlineTitle: '目录',
+      darkModeSwitchLabel: '外观',
+      sidebarMenuLabel: '文档目录',
+      returnToTopLabel: '返回顶部',
+      langMenuLabel: '语言',
+      lastUpdated: {
+        text: '更新于'
+      },
+      
+      // 导航栏 - 优化后
+      nav: [
+        { text: '首页', link: '/' },
+        {
+          text: '项目',
+          items: [
+            { text: 'Andrea Novel Helper', link: '/AndreaNovelHelper/' },
+            { text: 'img2pic', link: '/img2pic/' },
+            { text: 'Video2Motion', link: '/video2motion/' },
+            { text: 'Luna Launcher', link: '/LunaLauncher/' },
+            { text: 'YukariConnect', link: '/YukariConnect/' },
+            { text: 'LibGuideBook', link: '/LibGuideBook/' },
+            { text: 'MyGO', link: '/mygo/' },
+            { text: 'Patchouli.js', link: '/patchouli.js/' }
+          ]
+        },
+        { text: '博客', link: 'https://blog.sirrus.cc' }
+      ],
 
     sidebar: {
       '/': [
@@ -368,44 +441,44 @@ export default defineConfig({
       ]
     },
 
-    // 启用本地搜索
-    search: {
-      provider: 'local',
-      options: {
-        locales: {
-          zh: {
-            translations: {
-              button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档'
-              },
-              modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换'
-                }
-              }
-            }
-          }
-        },
-        miniSearch: {
-          options: {
-            // 可以在这里添加自定义的 extractField, tokenize, processTerm 等配置
-          },
-          searchOptions: {
-            // 自定义搜索选项
-            // fuzzy: 0.2, 
-            // prefix: true, 
-            // boost: { title: 4, text: 2, titles: 1 }
-          }
-        }
-      }
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/AndreaFrederica/neoguide' }
+    ]
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    /* Vite PWA 配置 */
+    pwa: {
+      mode: 'development',
+      registerType: 'autoUpdate',
+      strategies: 'generateSW',
+      includeAssets: ['icon.png', 'favicon.ico'],
+      manifest: {
+        name: "Andrea's Wiki",
+        short_name: 'AndreaWiki',
+        description: 'Andrea and Sirrus projects wiki',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/icon.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/icon.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
+      workbox: {
+        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+      },
+      devOptions: {
+        enabled: true,
+        suppressWarnings: true,
+        type: 'module',
+        navigateFallback: '/',
+      },
+    },
+  })
+)
