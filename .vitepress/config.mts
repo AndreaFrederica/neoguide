@@ -92,7 +92,8 @@ export default withPwa(
             { text: 'YukariConnect', link: '/YukariConnect/' },
             { text: 'LibGuideBook', link: '/LibGuideBook/' },
             { text: 'MyGO', link: '/mygo/' },
-            { text: 'Patchouli.js', link: '/patchouli.js/' }
+            { text: 'Patchouli.js', link: '/patchouli.js/' },
+            { text: 'KosuzuEngine', link: '/KosuzuEngine/' }
           ]
         },
         { text: '博客', link: 'https://blog.sirrus.cc' }
@@ -457,11 +458,33 @@ export default withPwa(
             },
           ]
         },
-        // 在这里添加其他软件的文档
-        // {
-        //   text: 'Another Software',
-        //   items: [...]
-        // }
+        {
+          text: 'KosuzuEngine',
+          items: [
+            {
+              text: '开始',
+              items: [
+                { text: '项目介绍', link: '/KosuzuEngine/' },
+                { text: '用户指南', link: '/KosuzuEngine/user/' },
+                { text: '开发者文档', link: '/KosuzuEngine/developer/' },
+              ]
+            },
+            {
+              text: '用户文档',
+              collapsed: true,
+              items: [
+                { text: '用户指南', link: '/KosuzuEngine/user/' },
+              ]
+            },
+            {
+              text: '开发者文档',
+              collapsed: true,
+              items: [
+                { text: '开发者指南', link: '/KosuzuEngine/developer/' },
+              ]
+            },
+          ]
+        }
       ]
     },
 
@@ -506,3 +529,12 @@ export default withPwa(
     },
   })
 )
+
+
+
+
+
+
+
+
+

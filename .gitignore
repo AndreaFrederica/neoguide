@@ -2,3 +2,10 @@ node_modules
 .vitepress/cache
 .vitepress/dist
 docs\.vitepress\dist
+novel-helper
+docs\.vitepress\cache
+docs\.vitepress\dist
+
+
+docs\dev-dist\**
+docs\dev-dist

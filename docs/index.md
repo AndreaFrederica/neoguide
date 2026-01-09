@@ -50,6 +50,16 @@ features:
     link: /mygo/
     linkText: 查看文档
 
+  - title: ✏️ NovelHelperLite
+    details: NovelHelperLite（ANH Lite）是 Novel Helper 的轻量版本，专为快速高效的文本编辑和笔记记录而设计的跨平台编辑器应用。
+    link: /NovelHelperLite/
+    linkText: 查看文档
+
+  - title: 🎮 KosuzuEngine
+    details: 基于 Vue 3 + TypeScript 的视觉小说引擎，专为 Web 环境设计。提供角色系统、对话系统、音频管理、存档系统等核心功能。
+    link: /KosuzuEngine/
+    linkText: 查看文档
+
   - title: 📖 Patchouli.js
     details: 基于 Vue 3 的 HTML 文档阅读器，支持单页和分页显示，针对 EPUB 电子书优化。名字来源于东方Project帕秋莉·诺蕾姬。
     link: /patchouli.js/
